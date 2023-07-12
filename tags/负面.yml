@@ -1,4 +1,5 @@
 负面提示:
+ 前摇: EasyNegative,bad-picture-chill-75v,bad-hands-5,ng_deepnegative_v1_75t
  NSFW: nsfw,logo,text
  embeddings: badhandv4,EasyNegative,ng_deepnegative_v1_75t,rev2-badprompt,verybadimagenegative_v1.3,negative_hand-neg,bad-picture-chill-75v
  变异手指: mutated hands and fingers
