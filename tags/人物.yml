@@ -18,7 +18,7 @@
 肤色:
   白: white skin
   色白: pale skin
-  褐色: dark skin
+  褐色皮肤: dark_skin
   明亮: shiny skin
   有色: colored skin
 
@@ -46,23 +46,22 @@
   性别暧昧: ambiguous_gender
   肢体残缺&欠损: amputee
   可男可女: androgynous
-	 青筋: anger_vein
-	 胎记: birthmark
-	 咬痕: bite_mark
- 	身体泛红: body_blush
- 	体毛: body_hair
- 	在身上写字: body_writing
-	 人体彩绘: bodypaint
-	 裆部隆起: bulge
-	 勃起: erection
-	 老二立帐篷: 	erection_under_clothes
- 	烧伤疤痕: burn_scar
-	 胸部有纹身: 	chest_tattoo
- 	黑暗的光环&黑暗的气场: dark_aura
- 	深色的阴茎: 	dark_penis
- 	褐色皮肤: dark_skin
-	 身体上有食物: food_on_body
-	 雀斑: freckles
+  青筋: anger_vein
+  胎记: birthmark
+  咬痕: bite_mark
+  身体泛红: body_blush
+  体毛: body_hair
+  在身上写字: body_writing
+  人体彩绘: bodypaint
+  裆部隆起: bulge
+  勃起: erection
+  老二立帐篷: 	erection_under_clothes
+  烧伤疤痕: burn_scar
+  胸部有纹身: 	chest_tattoo
+  黑暗的光环&黑暗的气场: dark_aura
+  深色的阴茎: 	dark_penis
+  身体上有食物: food_on_body
+  雀斑: freckles
 
 
 体形:
