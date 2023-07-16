@@ -26,44 +26,43 @@
  单侧进气口发型: single_hair_intake
  扫把状刘海: swept_bangs
 后发:
- 三股辫	braid
-辫式发髻	braided_bun
-麻花辫马尾	braided_ponytail
-团子头	double_bun
-马尾	ponytail
-蜷起来的马尾	folded_ponytail
-法式辫子	french_braid
-束在正面的马尾	front_ponytail
-发髻|团子头	hair_bun
-披下来的头发	hair_down
-披肩发	hair_over_shoulder
-头发往后扎	hair_pulled_back
-飞仙髻	hair_rings
-头发往后捋|往后梳的头发|背头发型	hair_slicked_back
-散开的头发	hair_spread_out
-盘起来的头发	hair_up
-女神式发型|公主辫	half_updo
-高马尾	high_ponytail
-公主发型	hime_cut
-长辫子	long_braid
-长马尾	long_ponytail
-双马尾	twintails
-低扎长发	low-tied_long_hair
-低扎马尾	low_ponytail
-低扎双尾	low_twintails
-中等长发	medium_hair
-垂下的长鬈发	ringlets
-短马尾	short_ponytail
-短双尾发型	short_twintails
-披在一侧的单条辫子	side_braid
-披在两侧的两条辫子	side_braids
-披在两侧的发髻	side_bun
-侧马尾	side_ponytail
-单股辫	single_braid
-尾部散开的单马尾发型	split_ponytail
-直发	straight_hair
-两条辫子	twin_braids
-小型双股辫	two_side_up
+ 三股辫: braid
+ 辫式发髻: braided_bun
+ 麻花辫马尾: braided_ponytail
+ 团子头: double_bun
+ 马尾: ponytail
+ 蜷起来的马尾: folded_ponytail
+ 法式辫子: french_braid
+ 束在正面的马尾: front_ponytail
+ 发髻&团子头: hair_bun
+ 披下来的头发: hair_down
+ 披肩发: hair_over_shoulder
+ 头发往后扎: hair_pulled_back
+ 飞仙髻: hair_rings
+ 头发往后捋&背头发型: hair_slicked_back
+ 散开的头发: hair_spread_out
+ 盘起来的头发: hair_up
+ 女神式发型&公主辫: half_updo
+ 高马尾: high_ponytail
+ 公主发型: hime_cut
+ 长辫子: long_braid
+ 长马尾: long_ponytail
+ 双马尾: twintails
+ 低扎长发: low-tied_long_hair
+ 低扎马尾: low_ponytail
+ 低扎双尾: low_twintails
+ 垂下的长鬈发: ringlets
+ 短马尾: short_ponytail
+ 短双尾发型: short_twintails
+ 披在一侧的单条辫子: side_braid
+ 披在两侧的两条辫子: side_braids
+ 披在两侧的发髻: side_bun
+ 侧马尾: side_ponytail
+ 单股辫: single_braid
+ 尾部散开的单马尾发型: split_ponytail
+ 直发: straight_hair
+ 两条辫子: twin_braids
+ 小型双股辫: two_side_up
 头发特色:
  头发很多的	big_hair
 金发	blonde_hair
