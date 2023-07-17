@@ -8,11 +8,11 @@
  尖尖的长耳朵: long_pointy_ears
  龙角: dragon_horns
  挡在头发下的眉毛: eyebrows_behind_hair
- 透过头发可以看到的眉: eyebrows_visible_through_hair
+ 透过头发的眉: eyebrows_visible_through_hair
  睫毛: eyelashes
  吊梢眼: tsurime
  眼线: eyeliner
- 透过头发可以看到的眼睛: eyes_visible_through_hair
+ 透过头发的眼睛: eyes_visible_through_hair
  眼镜别在头上: eyewear_on_head
  眼角有痣: mole_under_eye
  嘴角有痣&美人痣: mole_under_mouth
@@ -61,7 +61,7 @@
  (乳头)激凸: rei_no_himo
  乳沟: cleavage
  露出的乳沟: cleavage_cutout
- 激凸的乳头&隐约可见的乳头: covered_nipples
+ 激凸&隐约可见的乳头: covered_nipples
  深色的乳晕: dark_areolae
  丰满的乳房: perky_breasts
  深色的乳头: dark_nipples
@@ -90,7 +90,7 @@
  骆驼趾: cameltoe
  隐约入目的肚脐: covered_navel
  胯部: crotch
- 女性的腰窝&维纳斯之眼: dimples_of_venus
+ 女性的腰窝: dimples_of_venus
  腹股沟&耻丘: groin
  淫纹: pubic_tattoo
  鼓起的小腹: stomach_bulge
