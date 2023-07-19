@@ -16,43 +16,37 @@ TAGS_DIR = BASE_DIR.joinpath('tags')
 def tag_files():
     return TAGS_DIR.rglob("*.yml")
 
+
 def load_tags():
     tags = {}
     for filepath in tag_files():
         with open(filepath, "r", encoding="utf-8") as file:
             yml = yaml.safe_load(file)
-            tags[filepath.stem] = yml
+            for tag in yml:
+                if tag in tags:
+                    tags[tag].append(filepath.stem)
+                else:
+                    tags[tag] = [filepath.stem]
 
     return tags
 
-def find_tag(tags, location, file_list):
-    if isinstance(location, str):
-        return tags[random.choice(file_list)][location]
-    if isinstance(location, list):
-     if len(location) > 0:
-        value = tags[random.choice(file_list)]  
-        for tag in location:
-            value = find_tag(value, tag, file_list)
-        return value
-     if isinstance(location, dict):
-       key = random.choice(list(location.keys()))
-       value = location[key]
-       return find_tag(value, key, file_list)
-
-files = [f for f in tags if 'tag1' in tags[f]] random.shuffle(files) 
- 
-tag = find_tag(tags, ['tag1'], files)
-
-
 def find_tag(tags, location):
     if type(location) == str:
-        return tags[location]
+        file_stems = tags[location]
+        file_stem = random.choice(file_stems)
+        with open(TAGS_DIR.joinpath(file_stem + ".yml"), "r", encoding="utf-8") as file:
+            yml = yaml.safe_load(file)
+            return yml[location]
 
     value = ''
     if len(location) > 0:
         value = tags
         for tag in location:
-            value = value[tag]
+            file_stems = value[tag]
+            file_stem = random.choice(file_stems)
+            with open(TAGS_DIR.joinpath(file_stem + ".yml"), "r", encoding="utf-8") as file:
+                yml = yaml.safe_load(file)
+                value = yml[tag]
 
     if type(value) == dict:
         key = random.choice(list(value.keys()))
@@ -66,6 +60,7 @@ def find_tag(tags, location):
         value = random.choice(value)
 
     return value
+
 
 def replace_template(tags, prompt, seed = None):
     random.seed(seed)
