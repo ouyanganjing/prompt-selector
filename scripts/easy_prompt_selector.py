@@ -16,37 +16,26 @@ TAGS_DIR = BASE_DIR.joinpath('tags')
 def tag_files():
     return TAGS_DIR.rglob("*.yml")
 
-
 def load_tags():
     tags = {}
     for filepath in tag_files():
         with open(filepath, "r", encoding="utf-8") as file:
             yml = yaml.safe_load(file)
-            for tag in yml:
-                if tag in tags:
-                    tags[tag].append(filepath.stem)
-                else:
-                    tags[tag] = [filepath.stem]
+            for tag, value in yml.items():
+                key = f"{tag}:{filepath.stem}"
+                tags[key] = value
 
     return tags
 
 def find_tag(tags, location):
     if type(location) == str:
-        file_stems = tags[location]
-        file_stem = random.choice(file_stems)
-        with open(TAGS_DIR.joinpath(file_stem + ".yml"), "r", encoding="utf-8") as file:
-            yml = yaml.safe_load(file)
-            return yml[location]
+        return tags[location]
 
     value = ''
     if len(location) > 0:
         value = tags
         for tag in location:
-            file_stems = value[tag]
-            file_stem = random.choice(file_stems)
-            with open(TAGS_DIR.joinpath(file_stem + ".yml"), "r", encoding="utf-8") as file:
-                yml = yaml.safe_load(file)
-                value = yml[tag]
+            value = value[tag]
 
     if type(value) == dict:
         key = random.choice(list(value.keys()))
