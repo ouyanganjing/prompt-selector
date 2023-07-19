@@ -25,6 +25,25 @@ def load_tags():
 
     return tags
 
+def find_tag(tags, location, file_list):
+    if isinstance(location, str):
+        return tags[random.choice(file_list)][location]
+    if isinstance(location, list):
+     if len(location) > 0:
+        value = tags[random.choice(file_list)]  
+        for tag in location:
+            value = find_tag(value, tag, file_list)
+        return value
+     if isinstance(location, dict):
+       key = random.choice(list(location.keys()))
+       value = location[key]
+       return find_tag(value, key, file_list)
+
+files = [f for f in tags if 'tag1' in tags[f]] random.shuffle(files) 
+ 
+tag = find_tag(tags, ['tag1'], files)
+
+
 def find_tag(tags, location):
     if type(location) == str:
         return tags[location]
