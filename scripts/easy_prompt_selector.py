@@ -21,9 +21,7 @@ def load_tags():
     for filepath in tag_files():
         with open(filepath, "r", encoding="utf-8") as file:
             yml = yaml.safe_load(file)
-            for tag, value in yml.items():
-                key = f"{tag}:{filepath.stem}"
-                tags[key] = value
+            tags[filepath.stem] = yml
 
     return tags
 
@@ -49,7 +47,6 @@ def find_tag(tags, location):
         value = random.choice(value)
 
     return value
-
 
 def replace_template(tags, prompt, seed = None):
     random.seed(seed)
