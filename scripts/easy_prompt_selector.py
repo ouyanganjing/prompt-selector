@@ -25,10 +25,16 @@ def load_tags():
 
     return tags
 
+
+replaced_prompts = {}
+
+ 
 def find_tag(tags, location):
     if type(location) == str:
-        return tags[location]
-
+      prompt = location
+      if prompt not in replaced_prompts:
+        replaced_prompts[prompt] = tags[prompt] 
+        return tags[prompt]
     value = ''
     if len(location) > 0:
         value = tags
@@ -48,9 +54,7 @@ def find_tag(tags, location):
 
     return value
 
-def replace_template(tags, prompt, seed = None):
-    random.seed(seed)
-
+def replace_template(tags, prompt):
     count = 0
     while count < 100:
         if not '@' in prompt:
@@ -73,7 +77,6 @@ def replace_template(tags, prompt, seed = None):
                 prompt = prompt.replace(template, '', 1)
         count += 1
 
-    random.seed()
     return prompt
 
 class Script(scripts.Script):
@@ -87,12 +90,12 @@ class Script(scripts.Script):
         return "EasyPromptSelector"
 
     def show(self, is_img2img):
-        return AlwaysVisible
-
-    def ui(self, is_img2img):
         if (is_img2img):
             return None
 
+        return AlwaysVisible
+
+    def ui(self, is_img2img):
         reload_button = gr.Button('🔄', variant='secondary', elem_id='easy_prompt_selector_reload_button')
         reload_button.style(size='sm')
 
@@ -105,28 +108,47 @@ class Script(scripts.Script):
         return [reload_button]
 
     def replace_template_tags(self, p):
-        prompts = [
-            [p.prompt, p.all_prompts, 'Input Prompt'],
-            [p.negative_prompt, p.all_negative_prompts, 'Input NegativePrompt'],
-        ]
-        if getattr(p, 'hr_prompt', None): prompts.append([p.hr_prompt, p.all_hr_prompts, 'Input Prompt(Hires)'])
-        if getattr(p, 'hr_negative_prompt', None): prompts.append([p.hr_negative_prompt, p.all_hr_negative_prompts, 'Input NegativePrompt(Hires)'])
+        if shared.opts.eps_use_old_template_feature == False:
+            if ('@' in p.prompt):
+                for i in range(len(p.all_prompts)):
+                    self.save_prompt_to_pnginfo(p)
 
-        for i in range(len(p.all_prompts)):
-            seed = random.random()
-            for [prompt, all_prompts, raw_prompt_param_name] in prompts:
-                if '@' not in prompt: continue
+                    prompt = "".join(replace_template(self.tags, p.all_prompts[i]))
+                    p.all_prompts[i] = prompt
 
-                self.save_prompt_to_pnginfo(p, prompt, raw_prompt_param_name)
+            if ('@' in p.negative_prompt):
+                for i in range(len(p.all_negative_prompts)):
+                    self.save_prompt_to_pnginfo(p, True)
 
-                replaced = "".join(replace_template(self.tags, all_prompts[i], seed))
-                all_prompts[i] = replaced
+                    negative_prompt = "".join(replace_template(self.tags, p.all_negative_prompts[i]))
+                    p.all_negative_prompts[i] = negative_prompt
+        else:
+            if ('@' in p.prompt):
+                self.save_prompt_to_pnginfo(p)
 
-    def save_prompt_to_pnginfo(self, p, prompt, name):
+                p.prompt = replace_template(self.tags, p.prompt)
+                for i in range(len(p.all_prompts)):
+                    p.all_prompts[i] = p.prompt
+
+            if ('@' in p.negative_prompt):
+                self.save_prompt_to_pnginfo(p, True)
+
+                p.negative_prompt = replace_template(self.tags, p.negative_prompt)
+                for i in range(len(p.all_negative_prompts)):
+                    p.all_negative_prompts[i] = p.negative_prompt
+
+    def save_prompt_to_pnginfo(self, p, is_negative = False):
         if shared.opts.eps_enable_save_raw_prompt_to_pnginfo == False:
             return
 
-        p.extra_generation_params.update({name: prompt.replace('\n', ' ')})
+        if is_negative == False:
+            prompt = p.prompt.replace('\n', ' ')
+            param_name = "Input Prompt"
+        else:
+            prompt = p.negative_prompt.replace('\n', ' ')
+            param_name = "Input NegativePrompt"
+
+        p.extra_generation_params.update({param_name: prompt})
 
     def process(self, p, *args):
         self.replace_template_tags(p)
