@@ -172,7 +172,7 @@
  背心: vest
  女服务员围裙: waist_apron
  湿衬衫: wet_shirt
-服饰风格:
+服饰风格1.0:
  动物系装扮: animal_costume
  衣服有能露出腋下的开口: armpit_cutout
  露出屁股的服饰: ass_cutout
@@ -213,6 +213,7 @@
  裸体且裹着被子: naked_sheet
  裸体且穿着衬衫: naked_shirt
  裸体毛衣: naked_sweater
+服饰风格2.0
  裸体且穿着搭肩衫: naked_tabard
  裸体且裹着毛巾: naked_towel
  只穿着内衣(或泳衣)和围裙: nearly_naked_apron
@@ -357,8 +358,8 @@
  皮套裤: chaps
  格子裙: checkered_skirt
  衣物挂到大腿之间: clothes_between_thighs
- 短裤: shorts
- 短裙: skirt
+ 短裤1.0: shorts
+ 短裙2.0: skirt
  一条腿上挂着短裙: skirt_around_one_leg
  正装短裙: skirt_suit
  (社交场合穿的)短裙: cocktail_dress
