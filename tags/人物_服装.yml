@@ -172,7 +172,7 @@
  背心: vest
  女服务员围裙: waist_apron
  湿衬衫: wet_shirt
-服饰风格1.0:
+服饰风格:
  动物系装扮: animal_costume
  衣服有能露出腋下的开口: armpit_cutout
  露出屁股的服饰: ass_cutout
@@ -213,7 +213,6 @@
  裸体且裹着被子: naked_sheet
  裸体且穿着衬衫: naked_shirt
  裸体毛衣: naked_sweater
-服饰风格2.0：
  裸体且穿着搭肩衫: naked_tabard
  裸体且裹着毛巾: naked_towel
  只穿着内衣(或泳衣)和围裙: nearly_naked_apron
