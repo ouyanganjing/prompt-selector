@@ -1,4 +1,5 @@
 负面提示:
+ 二次元负面: EasyNegative,bad-hands-5,ng_deepnegative_v1_75t,bad-artist-anime
  NSFW: nsfw,logo,text
  embeddings: badhandv4,EasyNegative,ng_deepnegative_v1_75t,rev2-badprompt,verybadimagenegative_v1.3,negative_hand-neg,bad-picture-chill-75v
  变异手指: mutated hands and fingers
