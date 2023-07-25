@@ -17,7 +17,7 @@
  簪子: kanzashi
  发簪: hair_stick
  头绳: hair_bobbles
- 头发上成对的像无线蓝牙的发饰: hairpods
+ 像无线蓝牙发饰: hairpods
 其他:
  头发上系着铃铛: hair_bell
  心形眼镜: heart-shaped_eyewear
@@ -39,7 +39,7 @@
  口罩: mouth_mask
  面纱: mouth_veil
  被封住嘴: cleave_gag
- 厚如玻璃瓶底的圆眼镜: coke-bottle_glasses
+ 厚如玻璃瓶底圆眼镜: coke-bottle_glasses
  月牙耳环: crescent_earrings
  天狗面具: tengu_mask
  狐狸面具: fox_mask
@@ -47,7 +47,7 @@
  拉着口罩: mask_pull
  摘下的面具: mask_removed
  防毒面具: gas_mask
- 口红|唇膏: lipstick
+ 口红&唇膏: lipstick
 颈部:
  锚形项圈: anchor_choker
  珠子项链: bead_necklace
