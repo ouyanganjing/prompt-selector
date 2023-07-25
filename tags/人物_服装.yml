@@ -36,7 +36,7 @@
  百褶连衣裙: pleated_dress
  水手服款裙子: sailor_dress
  无肩带连衣裙: strapless_dress
- 太阳裙|背心裙: sundress
+ 太阳裙&背心裙: sundress
  燕尾服: tailcoat
 领口:
  格子领口: checkered_neckwear
@@ -55,7 +55,7 @@
  长手套: elbow_gloves
  护肘: elbow_pads
  脱下手套: gloves_removed
- 很短的手套|半截手套: half_gloves
+ 很短的手套&半截手套: half_gloves
  乳胶手套: latex_gloves
  分层的衣袖: layered_sleeves
  长袖: long_sleeves
@@ -84,17 +84,17 @@
  晚会礼服: evening_gown
  武道服: dougi
  拉链在正面的泳衣: front_zipper_swimsuit
- 女裙|女长服|女礼服: gown
+ 女裙&女礼服: gown
  体操服2.0: gym_uniform
- 绕颈裙|衬衣式连衣裙|露背吊带裙: halter_dress
+ 绕颈裙&露背吊带裙: halter_dress
  汉服: hanfu
  舞娘服: harem_outfit
  高开衩的连身衣: highleg_leotard
- 人体彩绘般的紧身衣: impossible_bodysuit
+ 人体彩绘般紧身衣: impossible_bodysuit
  日式服装: japanese_clothes
  幼儿园制服: kindergarten_uniform
  胶衣: latex
- 棒球服2.0: letterman_jacket
+ 棒球服2: letterman_jacket
  活体衣服: living_clothes
  洛丽塔时装: lolita_fashion
  休闲服: loungewear
@@ -108,10 +108,10 @@
  美少女战士制服: sailor_senshi_uniform
  圣诞老人服装: santa_costume
  校服: school_uniform
- 水手服: serafuku
+ 水手服2.0: serafuku
  女侍从的制服: stile_uniform
  拘束服: straitjacket
- 白无垢|日式嫁衣: uchikake
+ 白无垢&日式嫁衣: uchikake
  强化服: varia_suit
  处男杀手服: virgin_killer_outfit
  排球服: volleyball_uniform
@@ -124,7 +124,7 @@
  私服: casual
  衣服上有心形的开口: heart_cutout
  胸部开口出猫头剪影的服装: cat_cutout
- 指掀起裙子时形成的篮子形状: skirt_basket
+ 指裙子形成篮子形状: skirt_basket
  胸口带花边的服装: center_frills
  正中间开口的服装: center_opening
  格子衬衫: checkered_shirt
@@ -213,7 +213,7 @@
  裸体且裹着被子: naked_sheet
  裸体且穿着衬衫: naked_shirt
  裸体毛衣: naked_sweater
-服饰风格2.0
+服饰风格2.0：
  裸体且穿着搭肩衫: naked_tabard
  裸体且裹着毛巾: naked_towel
  只穿着内衣(或泳衣)和围裙: nearly_naked_apron
@@ -245,8 +245,8 @@
  乳头贴着创可贴: bandaids_on_nipples
  抹胸比基尼: bandeau
  皮带束胸: beltbra
- 只穿着比基尼上衣: bikini_top
- 脱下了比基尼上衣: bikini_top_removed
+ 只穿比基尼上衣: bikini_top
+ 脱下比基尼上衣: bikini_top_removed
  比基尼当内衣: bikini_under_clothes
  蕾丝边胸罩: lace-trimmed_bra
  裹胸布: sarashi
